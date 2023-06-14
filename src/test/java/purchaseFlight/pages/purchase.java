@@ -44,10 +44,9 @@ public class purchase {
 
 	@FindBy(xpath = "//input[@type='submit']")
 	WebElement purchaseFlightButton;
-	
+
 	@FindBy(xpath = "//h1[text()='Thank you for your purchase today!']")
 	WebElement ConfirmationMessage;
-	
 
 	public purchase() {
 
@@ -116,18 +115,17 @@ public class purchase {
 
 		purchaseFlightButton.click();
 	}
-	
+
 	public void verifyConfirmationMsg(String expMessage) {
 
-		String actMsg=ConfirmationMessage.getText();
-		if(actMsg.equals(expMessage)) {
+		String actMsg = ConfirmationMessage.getText();
+		if (actMsg.equals(expMessage)) {
 			System.out.println("Verification PASSED");
-			
-		}else {
+
+		} else {
 			System.out.println("Verification FAILED");
 		}
-		
+
 	}
-	
 
 }
